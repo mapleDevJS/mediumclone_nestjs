@@ -1,0 +1,15 @@
+version: '4.24.2'
+services:
+  postgres:
+    image: postgres:16
+    container_name: postgres_db
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_DB: mediumclone
+      POSTGRES_USER: mediumclone
+      POSTGRES_PASSWORD: 123
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+volumes:
+  postgres_data:
